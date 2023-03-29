@@ -137,3 +137,25 @@ main .section-1 p{
     font-family: var(--FUGAZ);
     font-size: 18px;
 }
+
+#cursor {
+  width: 2px;
+  height: 1.2em;
+  background-color: black;
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
