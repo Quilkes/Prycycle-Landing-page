@@ -280,6 +280,7 @@ main .section-1 h2{
 /* Testimonials section */
 .testimonials {
   margin: 2rem 0;
+  width: 90%;
 }
 
 .testimonial {
