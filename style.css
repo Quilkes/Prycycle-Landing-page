@@ -145,13 +145,12 @@ main .section-1{
   width: 100%;
   transform-origin: top left;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 
 main .section-1 h2{
   position: absolute;
   top: 40px;
-  
   width: 95%;
   text-align: center;
   font-family: var(--FUGAZ);
@@ -172,12 +171,8 @@ main .section-1 h2{
 }
 
 .hero2{
-  width: 160vw;
   display: grid;
   place-content: center;
-  padding: 4rem 0;
-  padding-left: 5rem;
-  padding-right: 5.4rem;
 }
 
 .hero2 img{
@@ -187,15 +182,15 @@ main .section-1 h2{
 
 .section-her02-3{
   display: flex;
-  overflow: auto;
-
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 7rem 0;
 }
 
 .hero3{
-  width: 100vw;
-  /* display: grid;
-  place-content: center; */
-  padding: 4rem 0;
+  display: grid;
+  place-content: center;
+  
 }
 
 .hero3 img{
@@ -216,7 +211,7 @@ main .section-1 h2{
 }
 
 .animate{
-  animation: slide 5s ease-in-out 1s;
+  animation: slide 5s ease-in-out 4s;
 }
 
 @keyframes slide {
@@ -239,7 +234,9 @@ main .section-1 h2{
   display: flex;
   flex-direction: column;
   background-color: cornflowerblue;
-  padding-bottom: 3.4rem;
+  padding-bottom: 7rem;
+  padding-top: 7rem;
+  transform: skew(0deg, -10deg);
 }
 
 .Product-Categories section
@@ -254,8 +251,8 @@ main .section-1 h2{
 }
 
 .product-categories h2,
-.featured-products h2,
-.testimonials h2{
+.featured-products h2{
+  transform: skew(0deg, 10deg);
   padding: 1.4rem 0;
   text-align: center;
   font-family: var(--PHUDU);
@@ -263,6 +260,7 @@ main .section-1 h2{
 }
 
 .category {
+  transform: skew(0deg, 10deg);
   flex-basis: calc(33.33% - 1rem);
   margin-bottom: 2rem;
   padding: 1rem;
@@ -312,7 +310,8 @@ main .section-1 h2{
   align-items: center;
   flex-wrap: wrap;
   background-color:rgb(53, 161, 125);
-  padding-bottom: 2rem;
+  padding: 7rem 0;
+  transform: skew(0deg, -10deg);
 }
 
 .product {
@@ -325,6 +324,7 @@ main .section-1 h2{
   background-color: #e3e5e7;
   box-shadow: 0px 2px 5px rgb(153, 144, 144);
   text-align: center;
+  transform: skew(0deg, 10deg);
 }
 
 .product img {
@@ -374,19 +374,18 @@ main .section-1 h2{
 /* Testimonials section */
 .testimonials {
   margin: 0 auto;
-  padding-top: 5rem;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
   padding-bottom: 3rem;
   background-color: rgb(216, 219, 228);
-  transform: skew(0deg, -8deg);
-  transform-origin: bottom right;
+  
 }
 
 .testimonial {
-  padding: 2rem;
+  padding: 1.4rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #e3e5e7;
@@ -399,16 +398,17 @@ main .section-1 h2{
   font-family: var(--ROBOTO);
 }
 
-.testimonials h2,
-.testimonial{
-  transform: skew(0deg, 8deg);
+.testimonials h2{
+  font-family: var(--PHUDU);
+  text-align: center;
+  font-size: 28px;
 }
 
 footer{
-  background-color: rgb(216, 219, 228);
+  background-color: #333;
   height: 190px;
   padding-top: 3rem;
-  color: #333;
+  color: var(--WHITESMOKE);
   display: grid;
   place-content: center;
 }
@@ -419,7 +419,7 @@ footer li{
 
 footer a{
   text-decoration: none;
-  color: #333;
+  color: var(--WHITESMOKE);
 }
 
 .coppy {
