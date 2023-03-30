@@ -161,11 +161,11 @@ main .section-1 h2{
   width: 100vw;
   position: absolute;
   bottom: 6%;
-  right: -37%;
+  right: -34%;
 }
 
 .hero img{
-  max-width: 130px;
+  max-width: 160px;
   height: auto;
   
 }
@@ -176,7 +176,7 @@ main .section-1 h2{
 }
 
 .hero2 img{
-  max-width: 140px;
+  max-width: 160px;
   height: auto;
 }
 
@@ -194,7 +194,7 @@ main .section-1 h2{
 }
 
 .hero3 img{
-  max-width: 140px;
+  max-width: 160px;
   height: auto;
 }
 
@@ -237,6 +237,12 @@ main .section-1 h2{
   padding-bottom: 7rem;
   padding-top: 7rem;
   transform: skew(0deg, -10deg);
+}
+
+.product-categories h2{
+  position: absolute;
+  top: -2rem;
+  width: 100%;
 }
 
 .Product-Categories section
@@ -293,7 +299,8 @@ main .section-1 h2{
 }
 
 .category button {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 1rem 2rem;
   background-color: royalblue;
   color: #fff;
@@ -312,9 +319,16 @@ main .section-1 h2{
   align-items: center;
   flex-wrap: wrap;
   background-color:rgb(53, 161, 125);
-  padding: 7rem 0;
+  padding: 4rem 0;
   transform: skew(0deg, -10deg);
 }
+
+.featured-products h2{
+  position: absolute;
+  top: -2rem;
+  width: 100%;
+}
+
 
 .product {
   flex-basis: calc(33.33% - 1rem);
@@ -334,6 +348,8 @@ main .section-1 h2{
   height: 200px;
   object-fit: cover;
   margin-bottom: 1rem;
+  border: 2px double rgb(53, 161, 125);
+  border-radius: 5px;
 }
 
 .product h3 {
@@ -347,7 +363,8 @@ main .section-1 h2{
 }
 
 .product button {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 1rem 2rem;
   background-color: royalblue;
   color: #fff;
@@ -382,8 +399,6 @@ main .section-1 h2{
   justify-content: space-between;
   gap: 1rem;
   padding-bottom: 3rem;
-  background-color: rgb(216, 219, 228);
-  
 }
 
 .testimonial {
