@@ -141,7 +141,7 @@ header .header-name-portion-2{
 }
 
 main .section-1{
-  height: 31rem;
+  height: 34rem;
   width: 100%;
   transform-origin: top left;
   position: relative;
@@ -211,7 +211,7 @@ main .section-1 h2{
 }
 
 .animate{
-  animation: slide 5s ease-in-out 4s;
+  animation: slide 3s ease-in-out 4s;
 }
 
 @keyframes slide {
