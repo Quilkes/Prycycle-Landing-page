@@ -142,6 +142,12 @@ header .header-name-portion-2{
 
 /* MAIN SECTION */
 
+main {
+  width: 95vw;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
 main .section-1{
   height: 34rem;
   width: 100%;
