@@ -19,7 +19,7 @@
 body{
   min-height: 100vh;
   max-width: 100vw;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .header{
@@ -29,7 +29,7 @@ body{
   padding: 0.4rem;
   z-index: 200;
   position: sticky;
-  width: 100%;
+  max-width: 100%;
   top: 0;
 }
 
@@ -50,13 +50,15 @@ header .header-name-portion-2{
 }
 
 .header-mini-container .menu{
-  background-color: transparent;  
-  outline: none;
-  border: none;
+  background-color: transparent;
   width: 35px;
   height: 30px;
-  display: flex;
   position: relative;
+  outline: none;
+  border: none;
+  z-index: 500;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -88,6 +90,8 @@ header .header-name-portion-2{
 
 .header-mini-container .open div{
   background-color: transparent;
+  transform: rotate(450deg);
+  transition: 0.5s ease-in-out;
 }
 
 .header-mini-container .open div::before{
@@ -104,10 +108,10 @@ header .header-name-portion-2{
 .nav{
   display: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   padding-top: 0.5rem;
   background-color: white;
-  width: 60%;
+  width: 65%;
   padding: 1rem;
   gap: 2rem;
   left: 0;
@@ -115,11 +119,11 @@ header .header-name-portion-2{
   box-shadow: 0 2px 4px #ccc;
 }
 
-
 .nav ul{
   display: flex;
   flex-flow: column nowrap;
   gap: 1.3rem;
+  margin-top: 2rem;
 }
 
 .nav li{
@@ -137,13 +141,14 @@ header .header-name-portion-2{
 }
 
 .nav.open{
-  display:block;
+  display: block;
+  /* animation: menu-open 2s ease-in-out; */
 }
 
 /* MAIN SECTION */
 
 main {
-  width: 99vw;
+  max-width: 99%;
   border-left: 2px solid #ccc;
   border-right: 2px solid #ccc;
   margin: 0 auto;
@@ -207,7 +212,7 @@ main .section-1 h2{
 }
 
 .hero4{
-  width: 100vw;
+  width: 100%;
   display: grid;
   place-content: center;
   margin-top: 2rem;
@@ -245,7 +250,7 @@ main .section-1 h2{
   flex-wrap: wrap;
   gap: 1rem;
   padding-bottom: 2rem;
-  background-color: cornflowerblue;
+  background-color: whitesmoke;
 }
 
 @media screen and (min-width: 754px) {
@@ -280,7 +285,7 @@ main .section-1 h2{
   text-align: center;
   max-width: 23rem;
   margin: 0 auto;
-  background-color: #e3e5e7;
+  background-color: #f6f7f8;
 }
 
 @media screen and (min-width: 754px) {
@@ -310,7 +315,7 @@ main .section-1 h2{
   display: block;
   width: 100%;
   padding: 1rem 2rem;
-  background-color: royalblue;
+  background-color:rgb(53, 161, 125);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -325,7 +330,6 @@ main .section-1 h2{
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  background-color:rgb(53, 161, 125);
   gap: 1rem;
   padding-bottom: 2rem;
 }
@@ -336,7 +340,7 @@ main .section-1 h2{
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #e3e5e7;
+  background-color: #f6f7f8;
   box-shadow: 0px 2px 5px rgb(153, 144, 144);
   text-align: center;
 }
@@ -368,7 +372,7 @@ main .section-1 h2{
   display: block;
   width: 100%;
   padding: 1rem 2rem;
-  background-color: royalblue;
+  background-color:rgb(53, 161, 125);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -380,7 +384,7 @@ main .section-1 h2{
 .featured-products-outside button {
   margin: 2rem auto;
   padding: 1rem 2rem;
-  background-color: royalblue;
+  background-color:rgb(53, 161, 125);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -388,10 +392,11 @@ main .section-1 h2{
   cursor: pointer;
   display: grid;
   place-content: center;
+  width: 20rem;
 }
 
-/* Testimonials section */
-.testimonials {
+/* TESTIMONIALS SECTION */
+.Testimonial-Section {
   margin: 0 auto;
   padding-top: 3rem;
   display: flex;
@@ -401,44 +406,63 @@ main .section-1 h2{
   padding-bottom: 3rem;
 }
 
-@media screen and (min-width: 754px) {
-  
-}
-
-
-.testimonial {
-  padding: 1.4rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #e3e5e7;
-  max-width: 23rem;
-  margin: 0 auto;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0.1);
-}
-
-@media screen and (min-width: 754px) {
-  
-}
-
-.testimonials p{
-  font-family: var(--ROBOTO);
-}
-
-.testimonials h2{
+.Testimonial-Section h2{
   font-family: var(--PHUDU);
   text-align: center;
   font-size: 28px;
 }
 
+.Testimonial-Section .testimonials-container {
+  padding: 1rem;
+  position: relative;
+  overflow: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 754px) {
+  
+}
+
+.Testimonial-Section .testimonial {
+  padding: 1.4rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f6f7f8;
+  min-width: 350px;
+  height: 200px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 754px) {
+  
+}
+
+.Testimonial-Section p{
+  font-family: var(--ROBOTO);
+}
+
+
+
+/* FOOTER SECTION */
+
 footer{
   background-color: #333;
-  height: 90px;
-  padding-top: 1rem;
+  height: fit-content;
+  max-width: 100%;
   color: var(--WHITESMOKE);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1rem;
+  padding: 1rem;
 }
 
 footer li{
@@ -455,6 +479,6 @@ button a{
   color: var(--WHITESMOKE);
 }
 
-.coppy{
+.copy{
   background-color: #333;
 }
