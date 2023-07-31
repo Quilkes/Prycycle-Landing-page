@@ -10,6 +10,7 @@
 :root{ 
   --WHITESMOKE: rgb(255, 250, 250);
   --ROYALBLUE: #6c5ce7;
+  --BACKGROUND-COLOR: white;
 
   --FUGAZ: 'Fugaz One', cursive;
   --PHUDU: 'Phudu', cursive;
@@ -19,12 +20,13 @@
 body{
   min-height: 100vh;
   max-width: 100vw;
-  background-color: whitesmoke;
+  background-color: var(--BACKGROUND-COLOR);
 }
+
+/* HEADER SECTION ===== == = == = = = == = = = = == = = ===> */
 
 .header{
   background-color: var(--WHITESMOKE);
-  border-bottom: 1px solid #ccc;
   height: 50px;
   padding: 0.4rem;
   z-index: 200;
@@ -144,8 +146,10 @@ header .header-name-portion-2{
   display: block;
   /* animation: menu-open 2s ease-in-out; */
 }
+/* < ===== == = == = = = == = = = = == = = === = == = == == */
 
-/* MAIN SECTION */
+
+/* MAIN SECTION   ===== == = == = = = == = = = = == = = ===> */
 
 main {
   max-width: 99%;
@@ -159,6 +163,7 @@ main .section-1{
   width: 100%;
   position: relative;
   overflow: hidden;
+  border-bottom: 5px solid violet;
 }
 
 main .section-1 h2{
@@ -169,6 +174,8 @@ main .section-1 h2{
   font-family: var(--FUGAZ);
   font-size: 27px;
 }
+
+/* HERO SECTION   ===== == = == = = = == = = = = == = = ===> */
 
 .hero{
   width: 100vw;
@@ -242,6 +249,10 @@ main .section-1 h2{
   }
 }
 
+/* <===== == = == = = = == ==  == == = = = = == = = === */
+
+/* PRODUCT SECTION = == == = == = == = == = == = == = => */
+
 .product-categories{
   display: flex;
   flex-direction: column;
@@ -251,6 +262,7 @@ main .section-1 h2{
   gap: 1rem;
   padding-bottom: 2rem;
   background-color: whitesmoke;
+  border-bottom: 5px solid violet;
 }
 
 @media screen and (min-width: 754px) {
@@ -322,8 +334,9 @@ main .section-1 h2{
   font-size: 1.2rem;
   cursor: pointer;
 }
+/* <= == == = == = == = == = == = == = ==== == = ========== */
 
-/* Featured Products section */
+/* FEATURED PRODUCTS SECTION == = = = == = = = = == = = == > */
 .featured-products {
   display: flex;
   flex-direction: column;
@@ -332,6 +345,7 @@ main .section-1 h2{
   flex-wrap: nowrap;
   gap: 1rem;
   padding-bottom: 2rem;
+  border-bottom: 5px solid violet;
 }
 
 
@@ -394,8 +408,9 @@ main .section-1 h2{
   place-content: center;
   width: 20rem;
 }
+/* <======= = = == == = == = =  == = = = == = = = = == = = == */
 
-/* TESTIMONIALS SECTION */
+/* TESTIMONIAL  PRODUCTS SECTION == = = = == = = = = == = = == > */
 .Testimonial-Section {
   margin: 0 auto;
   padding-top: 3rem;
@@ -448,10 +463,11 @@ main .section-1 h2{
 .Testimonial-Section p{
   font-family: var(--ROBOTO);
 }
+/* <==== == = = == = = = == =  == = = = == = = = = == = = ==  */
 
 
 
-/* FOOTER SECTION */
+/* FOOTER SECTION = == = = = == ====== = = = == = = == = => */
 
 footer{
   background-color: #333;
@@ -482,3 +498,4 @@ button a{
 .copy{
   background-color: #333;
 }
+/* <= == == ======= = == = = = == ====== = = = == = = == = = */
