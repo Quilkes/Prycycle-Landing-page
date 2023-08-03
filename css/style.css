@@ -25,7 +25,7 @@ body{
 
 /* HEADER SECTION ===== == = == = = = == = = = = == = = ===> */
 
-.header{
+/* .header{
   background-color: var(--WHITESMOKE);
   height: 50px;
   padding: 0.4rem;
@@ -33,25 +33,25 @@ body{
   position: sticky;
   max-width: 100%;
   top: 0;
-}
+} */
 
-.header-name-portion{
+/* .header-name-portion{
   font-family: var(--FUGAZ);
   color: var(--ROYALBLUE);
-}
+} */
 
-header .header-name-portion-2{
+/* header .header-name-portion-2{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif';
-}
+} */
 
-.header-mini-container{
+/* .header-mini-container{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-.header-mini-container .menu{
+/* .header-mini-container .menu{
   background-color: transparent;
   width: 35px;
   height: 30px;
@@ -63,16 +63,16 @@ header .header-name-portion-2{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.header-mini-container button div,
+/* .header-mini-container button div,
 .header-mini-container button div::before,
 .header-mini-container button div::after{
   width: 25px;
   height: 3px;
   background-color: black; 
   border-radius: 5px;
-}
+} */
 
 .header-mini-container button div::before,
 .header-mini-container button div::after{
@@ -107,7 +107,7 @@ header .header-name-portion-2{
   background-color: red;  
 }
 
-.nav{
+/* .nav{
   display: none;
   position: absolute;
   top: 0;
@@ -119,9 +119,9 @@ header .header-name-portion-2{
   left: 0;
   height: 100vh;
   box-shadow: 0 2px 4px #ccc;
-}
+} */
 
-.nav ul{
+/* .nav ul{
   display: flex;
   flex-flow: column nowrap;
   gap: 1.3rem;
@@ -133,14 +133,14 @@ header .header-name-portion-2{
   height: 30px;
   width: 100%;
   padding-top: 1rem;
-}
-
+} */
+/* 
 .nav a{
   text-decoration: none;
   font-size: 1.2rem;
   color: #333;
   font-family: var(--PHUDU);
-}
+} */
 
 .nav.open{
   display: block;
@@ -176,7 +176,7 @@ main .section-1 h2{
 }
 
 /* HERO SECTION   ===== == = == = = = == = = = = == = = ===> */
-
+/* 
 .hero{
   width: 100vw;
   position: absolute;
@@ -188,7 +188,7 @@ main .section-1 h2{
   max-width: 160px;
   height: auto;
   
-}
+} */
 
 .hero2{
   display: grid;
@@ -253,7 +253,7 @@ main .section-1 h2{
 
 /* PRODUCT SECTION = == == = == = == = == = == = == = => */
 
-.product-categories{
+/* .product-categories{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -263,13 +263,13 @@ main .section-1 h2{
   padding-bottom: 2rem;
   background-color: whitesmoke;
   border-bottom: 5px solid violet;
-}
+} */
 
 @media screen and (min-width: 754px) {
   
 }
 
-.Product-Categories section
+/* .Product-Categories section
 .product-categories {
   display: flex;
   flex-direction: column;
@@ -278,26 +278,26 @@ main .section-1 h2{
   flex-wrap: wrap;
   margin: 2rem 0;
   gap: 1rem;
-}
+} */
 
-.product-categories h2,
+/* .product-categories h2,
 .featured-products h2{
   padding: 1.4rem 0;
   text-align: center;
   font-family: var(--PHUDU);
   font-size: 28px;
-}
+} */
 
 .category {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  /* margin-bottom: 2rem; */
+  /* padding: 1rem; */
+  /* border: 1px solid #ddd; */
+  /* border-radius: 5px; */
   box-shadow: 0px 2px 5px #333;
-  text-align: center;
-  max-width: 23rem;
-  margin: 0 auto;
-  background-color: #f6f7f8;
+  /* text-align: center; */
+  /* max-width: 23rem; */
+  /* margin: 0 auto; */
+  /* background-color: #f6f7f8; */
 }
 
 @media screen and (min-width: 754px) {
