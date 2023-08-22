@@ -1,281 +1,641 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prycycle Landing Page</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Phudu:wght@900&family=Raleway:wght@900&family=Roboto:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link href="/dist/output.css" rel="stylesheet" />
+		<script src="/src/js/main.js" defer></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prycycle Landing Page</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Phudu:wght@900&family=Raleway:wght@900&family=Roboto:wght@700&display=swap"
-        rel="stylesheet" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <script src="/src/js/main.js" defer></script>
-</head>
+	<body class="max-w-full min-h-screen bg-white">
+		<section
+			class="items-center justify-between hidden w-full px-8 text-white bg-red-700 md:h-8 md:flex"
+		>
+			<div class="flex justify-between gap-4 w-fit">
+				<span><i class="fa-solid fa-phone"></i>+2348138318997</span>
+				<span>
+					<i class="fa-solid fa-envelope"></i>matinadekola33@gmail.com
+				</span>
+			</div>
+			<div class="flex justify-between gap-4 w-fit">
+				<span> <i class="fa-solid fa-magnifying-glass"></i>search </span>
+				<span><i class="fa-solid fa-user"></i>account</span>
+			</div>
+		</section>
 
-<body class="max-w-full min-h-screen bg-white">
-    <section class="items-center justify-between hidden w-full px-8 md:flex md:h-8 bg-slate-800 text-slate-400">
-        <div class="flex justify-between gap-4 w-fit">
-            <span>+2348138318997</span>
-            <span>matinadekola33@gmail.com</span>
-        </div>
-        <div class="flex justify-between gap-4 w-fit">
-            <span>search</span>
-            <span>ACCOUNT</span>
-        </div>
-    </section>
+		<header
+			class="sticky z-10 top-0 bg-slate-50 w-full h-12 p-2 md:absolute md:top-32 md:h-24 md:bg-slate-800 md:opacity-90 md:w-[90%] md:left-[50%] md:right-[50%] md:translate-x-[-50%] md:translate-y-[-50%] md:flex md:px-4"
+		>
+			<section
+				class="flex flex-row-reverse justify-between md:w-full md:flex-row md:justify-between"
+			>
+				<div class="md:hidden"></div>
+				<h1
+					class="text-2xl md:h-full md:w-1/6 md:flex md:items-center md:justify-center"
+				>
+					<span class="text-indigo-600 font-Roboto">PRY</span
+					><span class="font-Roboto md:text-slate-400">CYCLE</span>
+				</h1>
+				<button
+					id="mobile-open-btn"
+					class="relative flex items-center justify-center h-8 bg-transparent border outline-none w-9 font-Phudu md:hidden"
+				>
+					<div
+						class="w-8 h-1 bg-slate-900 rounded-sm absolute before:contents[''] before:w-8 before:h-1 before:bg-slate-900 before:rounded before:absolute before:-translate-x-4 before:translate-y-2 after:contents[''] after:w-8 after:rounded after:h-1 after:bg-slate-900 after:absolute after:-translate-x-4 after:-translate-y-2"
+					></div>
+				</button>
 
-    <header
-        class="sticky z-10 top-0 bg-slate-50 w-full h-12 p-2 md:absolute md:top-32 md:h-24 md:bg-slate-800 md:opacity-90 md:w-[90%] md:left-[50%] md:right-[50%] md:translate-x-[-50%] md:translate-y-[-50%] md:flex md:px-4">
-        <section class="flex flex-row-reverse justify-between md:w-full md:flex-row md:justify-between">
-            <div class="md:hidden"></div>
-            <h1 class="text-2xl md:h-full md:w-1/6 md:flex md:items-center md:justify-center">
-                <span class="text-indigo-600 font-Roboto">PRY</span><span
-                    class="font-Roboto md:text-slate-400">CYCLE</span>
-            </h1>
-            <button id="mobile-open-btn"
-                class="relative flex items-center justify-center h-8 bg-transparent border outline-none w-9 font-Phudu md:hidden">
-                <div
-                    class="w-8 h-1 bg-slate-900 rounded-sm absolute before:contents[''] before:w-8 before:h-1 before:bg-slate-900 before:rounded before:absolute before:-translate-x-4 before:translate-y-2 after:contents[''] after:w-8 after:rounded after:h-1 after:bg-slate-900 after:absolute after:-translate-x-4 after:-translate-y-2">
-                </div>
-            </button>
+				<nav
+					id="mobile-nav"
+					class="absolute top-0 left-0 z-40 hidden w-3/5 h-screen p-4 pt-2 origin-top shadow-sm bg-slate-50 animate-open-menu md:hidden"
+				>
+					<ul class="flex flex-col gap-5 mt-8 flex-nowrap">
+						<li class="w-full h-8 pt-4 list-none">
+							<a class="text-xl text-[#333] font-Phudu" href="/">HOME</a>
+						</li>
+						<li class="w-full h-8 pt-4 list-none">
+							<a
+								class="text-xl text-[#333] font-Phudu"
+								href="https://prycycle.netlify.app"
+								>PRODUCTS</a
+							>
+						</li>
+						<li class="w-full h-8 pt-4 list-none">
+							<a
+								class="text-xl text-[#333] font-Phudu"
+								href="https://prycycle.netlify.app/about"
+								>ABOUT</a
+							>
+						</li>
+						<li class="w-full h-8 pt-4 list-none">
+							<a
+								class="text-xl text-[#333] font-Phudu"
+								href="https://prycycle.netlify.app/about"
+								>BLOG</a
+							>
+						</li>
+						<li class="w-full h-8 pt-4 list-none">
+							<a
+								class="text-xl text-[#333] font-Phudu"
+								href="https://prycycle.netlify.app/about"
+								>PAGES</a
+							>
+						</li>
+						<li class="w-full h-8 pt-4 list-none">
+							<a
+								class="text-xl text-[#333] font-Phudu"
+								href="https://prycycle.netlify.app/contact"
+								>CONTACT</a
+							>
+						</li>
+					</ul>
+				</nav>
 
-            <nav id="mobile-nav"
-                class="absolute top-0 left-0 z-40 hidden w-3/5 h-screen p-4 pt-2 origin-top shadow-sm bg-slate-50 animate-open-menu md:hidden">
-                <ul class="flex flex-col gap-5 mt-8 flex-nowrap">
-                    <li class="w-full h-8 pt-4 list-none">
-                        <a class="text-xl text-[#333] font-Phudu" href="/">HOME</a>
-                    </li>
-                    <li class="w-full h-8 pt-4 list-none">
-                        <a class="text-xl text-[#333] font-Phudu" href="https://prycycle.netlify.app">PRODUCTS</a>
-                    </li>
-                    <li class="w-full h-8 pt-4 list-none">
-                        <a class="text-xl text-[#333] font-Phudu" href="https://prycycle.netlify.app/about">ABOUT</a>
-                    </li>
-                    <li class="w-full h-8 pt-4 list-none">
-                        <a class="text-xl text-[#333] font-Phudu" href="https://prycycle.netlify.app/about">BLOG</a>
-                    </li>
-                    <li class="w-full h-8 pt-4 list-none">
-                        <a class="text-xl text-[#333] font-Phudu" href="https://prycycle.netlify.app/about">PAGES</a>
-                    </li>
-                    <li class="w-full h-8 pt-4 list-none">
-                        <a class="text-xl text-[#333] font-Phudu"
-                            href="https://prycycle.netlify.app/contact">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
+				<nav
+					id="ipad-nav"
+					class="hidden md:w-[67%] md:h-full md:flex md:items-center lg:w-3/5"
+				>
+					<ul class="flex w-full justify-evenly text-slate-300">
+						<li class="hover:text-white active:text-white">
+							<a class="" href="/">HOME</a>
+						</li>
+						|
+						<li class="hover:text-white active:text-white">
+							<a class="" href="https://prycycle.netlify.app">PRODUCTS</a>
+						</li>
+						|
+						<li class="hover:text-white active:text-white">
+							<a class="" href="https://prycycle.netlify.app/about">ABOUT</a>
+						</li>
+						|
+						<li class="hover:text-white active:text-white">
+							<a class="" href="https://prycycle.netlify.app/about">BLOG</a>
+						</li>
+						|
+						<li class="hover:text-white active:text-white">
+							<a class="" href="https://prycycle.netlify.app/about">PAGES</a>
+						</li>
+						|
+						<li class="hover:text-white active:text-white">
+							<a class="" href="https://prycycle.netlify.app/contact"
+								>CONTACT</a
+							>
+						</li>
+					</ul>
+				</nav>
 
-            <nav id="ipad-nav" class="hidden md:w-[67%] md:h-full md:flex md:items-center lg:w-3/5">
-                <ul class="flex w-full justify-evenly text-slate-300">
-                    <li class="hover:text-white active:text-white">
-                        <a class="" href="/">HOME</a>
-                    </li>
-                    |
-                    <li class="hover:text-white active:text-white">
-                        <a class="" href="https://prycycle.netlify.app">PRODUCTS</a>
-                    </li>
-                    |
-                    <li class="hover:text-white active:text-white">
-                        <a class="" href="https://prycycle.netlify.app/about">ABOUT</a>
-                    </li>
-                    |
-                    <li class="hover:text-white active:text-white">
-                        <a class="" href="https://prycycle.netlify.app/about">BLOG</a>
-                    </li>
-                    |
-                    <li class="hover:text-white active:text-white">
-                        <a class="" href="https://prycycle.netlify.app/about">PAGES</a>
-                    </li>
-                    |
-                    <li class="hover:text-white active:text-white">
-                        <a class="" href="https://prycycle.netlify.app/contact">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
+				<div
+					class="hidden md:flex md:w-[8%] h-full items-center justify-center md:text-3xl cursor-pointer"
+				>
+					<i class="fa-solid fa-envelope"></i>
+				</div>
+			</section>
+		</header>
 
-            <div class="hidden md:flex md:w-[8%] h-full items-center justify-center md:text-3xl cursor-pointer"></div>
-        </section>
-    </header>
+		<main class="max-w-full mt-0 mr-[auto]">
+			<section
+				class="h-full` w-full relative flex flex-col items-end justify-center"
+			>
+				<div
+					class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-30"
+				>
+					<section
+						class="sm:ml-[10%] flex flex-col justify-evenly gap-2 md:ml-[15%] md:pr-1 md:h-2/5 md:mt-20"
+					>
+						<h2
+							class="text-2xl font-extrabold font-Roboto text-slate-200 sm:text-3xl md:text-4xl lg:text-5xl"
+						>
+							BEST BYCYCLE CYCLING EXPERIENCE
+						</h2>
+						<h3
+							class="font-sans text-slate-200 sm:text-sm md:text-base lg:text-lg"
+						>
+							BECOME THE WORLD LEADER ON THE INTERNET FOR THE SPORT OF CYCLING.
+						</h3>
+						<section
+							class="hidden md:flex md:w-[90%] md:justify-evenly md:items-center"
+						>
+							<span
+								class="md:w-[46%] md:h-[2px] md:border md:bg-white md:rounded"
+							></span>
+							<span class="md:w-[10%] text-3xl text-center">
+								<i class="fa-solid fa-gear"></i>
+							</span>
+							<span
+								class="md:w-[46%] md:h-[2px] md:border md:bg-white md:rounded"
+							></span>
+						</section>
+						<button
+							class="bg-blue-800 border-none text-slate-200 w-28 font-Roboto h-9 top-40 hover:ring-2 hover:bg-blue-700 md:hover:ring-4 md:w-36 md:h-11 lg:h-14 lg:w-60 lg:hover:ring-4"
+						>
+							<a href="https://prycycle.netlify.app" class="outline-none"
+								>SHOP NOW</a
+							>
+						</button>
+					</section>
+				</div>
+				<div class="w-full h-fit">
+					<img
+						src="/img/snow.jpg"
+						height="500"
+						width="500"
+						alt="Accessories"
+						class="w-full h-auto"
+					/>
+				</div>
+			</section>
 
-    <main class="max-w-full mt-0 mr-[auto]">
-        <section class="h-full` w-full relative flex flex-col items-end justify-center">
-            <div class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-30">
-                <section class="sm:ml-[10%] flex flex-col justify-evenly gap-2 md:ml-[15%] md:pr-1 md:h-2/5 md:mt-20">
-                    <h2 class="text-2xl font-extrabold font-Roboto text-slate-200 sm:text-3xl md:text-4xl lg:text-5xl">
-                        BEST BYCYCLE CYCLING EXPERIENCE
-                    </h2>
-                    <h3 class="font-sans text-slate-200 sm:text-sm md:text-base lg:text-lg">
-                        BECOME THE WORLD LEADER ON THE INTERNET FOR THE SPORT OF CYCLING.
-                    </h3>
-                    <section class="hidden md:flex md:w-[90%] md:justify-evenly md:items-center">
-                        <span class="md:w-[46%] md:h-[2px] md:border md:bg-white md:rounded"></span>
-                        <span class="md:w-[10%] text-3xl text-center"></span>
-                        <span class="md:w-[46%] md:h-[2px] md:border md:bg-white md:rounded"></span>
-                    </section>
-                    <button
-                        class="bg-blue-800 border-none text-slate-200 w-28 font-Roboto h-9 top-40 hover:ring-2 hover:bg-blue-700 md:hover:ring-4 md:w-36 md:h-11 lg:h-14 lg:w-60 lg:hover:ring-4">
-                        <a href="https://prycycle.netlify.app" class="outline-none">SHOP NOW</a>
-                    </button>
-                </section>
-            </div>
-            <div class="w-full h-fit">
-                <img src="/img/snow.jpg" height="500" width="500" alt="Accessories" class="w-full h-auto" />
-            </div>
-        </section>
+			<section
+				class="flex flex-col flex-wrap items-center justify-between gap-4 px-3 pb-8 bg-white"
+			>
+				<h2 class="pt-5 text-2xl text-center">
+					<span class="text-red-600">FEATURED</span> COLLECTIONS
+				</h2>
+				<section class="flex items-center w-3/5 justify-evenly">
+					<span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
+					<span class="w-[7%] text-2xl text-center">
+						<i class="fa-solid fa-gear"></i>
+					</span>
+					<span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
+				</section>
 
-        <section class="flex flex-col flex-wrap items-center justify-between gap-4 px-3 pb-8 bg-white">
-            <h2 class="pt-5 text-2xl text-center"><span class="text-red-600">FEATURED</span> COLLECTIONS</h2>
-            <section class="flex items-center w-3/5 justify-evenly">
-                <span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
-                <span class="w-[7%] text-2xl text-center"></span>
-                <span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
-            </section>
+				<!-- collections start -->
+				<section
+					class="flex flex-row flex-wrap items-center justify-center gap-8 mt-4 h-fit w-fit"
+				>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly lg:flex-col">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Find your perfect bike for any terrain and any ride.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-            <section class="flex flex-col items-center justify-center gap-8 mt-4 h-fit w-fit md:flex-row md:flex-wrap">
-                <div
-                    class="w-full h-[27rem] max-w-[20rem] sm:max-w-[25rem] bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400">
-                    <figure class="w-full h-[60%]">
-                        <img src="/img/bicycle.jpg" alt="Bicycles" class="h-full w-full" />
-                    </figure>
-                    <div class="w-full h-2/5 flex flex-col justify-evenly">
-                        <span class="h-8 w-full font-Raleway font-semibold text-red-700 text-xl text-end">$443</span>
-                        <h3 class="font-Phudu font-semibold text-xl">Velo Model A351</h3>
-                        <p class="font-sans font-medium">Find your perfect bike for any terrain and any ride.</p>
-                        <button
-                            class="w-full h-10 bg-blue-800 hover:bg-blue-700 hover:ring-2 border-none text-slate-200 font-Roboto rounded-md">
-                            <a href="https://prycycle.netlify.app/BicycleViewProduct/11">View product</a>
-                        </button>
-                    </div>
-                </div>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly lg:flex-col">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Find your perfect bike for any terrain and any ride.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-                <div
-                    class="w-full h-[27rem] max-w-[20rem] sm:max-w-[25rem] bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400">
-                    <figure class="w-full h-[60%]">
-                        <img src="/img/bicycle.jpg" alt="Bicycles" class="h-full w-full" />
-                    </figure>
-                    <div class="w-full h-2/5 flex flex-col justify-evenly">
-                        <span class="h-8 w-full font-Raleway font-semibold text-red-700 text-xl text-end">$443</span>
-                        <h3 class="font-Phudu font-semibold text-xl">Velo Model A351</h3>
-                        <p class="font-sans font-medium">Get ready to shred with our selection of skateboards and
-                            longboards.</p>
-                        <button
-                            class="w-full h-10 bg-blue-800 hover:bg-blue-700 hover:ring-2 border-none text-slate-200 font-Roboto rounded-md">
-                            <a href="https://prycycle.netlify.app/BicycleViewProduct/11">View product</a>
-                        </button>
-                    </div>
-                </div>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Get ready to shred with our selection of skateboards and
+								longboards.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-                <div
-                    class="w-full h-[27rem] max-w-[20rem] sm:max-w-[25rem] bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400">
-                    <figure class="w-full h-[60%]">
-                        <img src="/img/bicycle.jpg" alt="Bicycles" class="h-full w-full" />
-                    </figure>
-                    <div class="w-full h-2/5 flex flex-col justify-evenly">
-                        <span class="h-8 w-full font-Raleway font-semibold text-red-700 text-xl text-end">$443</span>
-                        <h3 class="font-Phudu font-semibold text-xl">Velo Model A351</h3>
-                        <p class="font-sans font-medium">Get ready to shred with our selection of skateboards and
-                            longboards.</p>
-                        <button
-                            class="w-full h-10 bg-blue-800 hover:bg-blue-700 hover:ring-2 border-none text-slate-200 font-Roboto rounded-md">
-                            <a href="https://prycycle.netlify.app/BicycleViewProduct/11">View product</a>
-                        </button>
-                    </div>
-                </div>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Get ready to shred with our selection of skateboards and
+								longboards.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-                <div
-                    class="w-full h-[27rem] max-w-[20rem] sm:max-w-[25rem] bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400">
-                    <figure class="w-full h-[60%]">
-                        <img src="/img/bicycle.jpg" alt="Bicycles" class="h-full w-full" />
-                    </figure>
-                    <div class="w-full h-2/5 flex flex-col justify-evenly">
-                        <span class="h-8 w-full font-Raleway font-semibold text-red-700 text-xl text-end">$443</span>
-                        <h3 class="font-Phudu font-semibold text-xl">Velo Model A351</h3>
-                        <p class="font-sans font-medium">Complete your ride with our range of accessories, including
-                            helmets, pads, lights, and more.</p>
-                        <button
-                            class="w-full h-10 bg-blue-800 hover:bg-blue-700 hover:ring-2 border-none text-slate-200 font-Roboto rounded-md">
-                            <a href="https://prycycle.netlify.app/BicycleViewProduct/11">View product</a>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <!-- <button
-                class="w-full h-14 bg-blue-800 hover:bg-blue-700 hover:ring-2 border-none text-slate-200 font-Roboto">
-                <a href="https://prycycle.netlify.app/BicycleViewProduct/11">VIEW FULL CATALOG</a>
-            </button> -->
-        </section>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Complete your ride with our range of accessories, including
+								helmets, pads, lights, and more.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-        <section class="flex flex-col gap-4 items-center py-4">
-            <h2 class="pt-5 text-2xl text-center">ABOUT US</h2>
-            <section class="flex items-center w-3/5 justify-evenly">
-                <span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
-                <span class="w-[7%] text-2xl text-center"></span>
-                <span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
-            </section>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Complete your ride with our range of accessories, including
+								helmets, pads, lights, and more.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-            <section class="fex flex-col gap-8 h-fit">
-                <div class="border h-fit relative">
-                    <figure class="relative flex flex-col justify-center items-center hover:opacity-90">
-                        <div
-                            class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-40">
-                        </div>
-                        <img src="/img/m-biking.jpg" alt="Cruiser Bike" class="w-full h-auto" />
-                        <div
-                            class="absolute h-5/6 w-2/5 flex flex-col gap-3 justify-center items-center text-center text-white">
-                            <h2 class="font-Roboto text-2xl">Our Story</h2>
-                            <p class="font-sans">Ajibade Abdulmatin founded his first shop in Nigeria 2022</p>
-                            <button
-                                class="bg-white w-full text-black h-10 hover:bg-slate-100 hover:ring-2 ring-sky-200">
-                                <a href="">LEARN MORE</a>
-                            </button>
-                        </div>
-                    </figure>
-                </div>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Complete your ride with our range of accessories, including
+								helmets, pads, lights, and more.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
 
-                <section class="flex flex-col h-[27rem] border border-red-600 ">
-                    <div class="h-[48%] border border-red-600 relative">
-                        <div
-                            class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-40">
-                        </div>
-                        <img src="/img/bike.jpg" alt="Carving Longboard" class="w-full h-full" />
-                        <div class="absolute">
-                            <h3>Recieve our Newsletter</h3>
-                            <p>Nothing more fun than drilling down on a cool terrace</p>
-                        </div>
+					<div
+						class="w-full h-[27rem] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl bg-slate-50 flex flex-col gap-2 p-2 shadow-md shadow-slate-400"
+					>
+						<figure class="w-full h-[60%]">
+							<img
+								src="/img/bicycle.jpg"
+								alt="Bicycles"
+								class="w-full h-full"
+							/>
+						</figure>
+						<div class="flex flex-col w-full h-2/5 justify-evenly">
+							<div class="flex items-center justify-between">
+								<span class="flex w-fit h-fit">
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+									<i class="bg-orange-600 fa-solid fa-star"></i>
+								</span>
+								<span
+									class="w-full h-8 text-xl font-semibold text-red-700 font-Raleway text-end"
+									>$443</span
+								>
+							</div>
+							<h3 class="text-xl font-semibold font-Phudu">Velo Model A351</h3>
+							<p class="font-sans font-medium">
+								Complete your ride with our range of accessories, including
+								helmets, pads, lights, and more.
+							</p>
+							<button
+								class="w-full h-10 bg-blue-800 border-none rounded-md hover:bg-blue-700 hover:ring-2 text-slate-200 font-Roboto"
+							>
+								<a href="https://prycycle.netlify.app/BicycleViewProduct/11"
+									>View product</a
+								>
+							</button>
+						</div>
+					</div>
+				</section>
+				<!-- collections end -->
+			</section>
 
-                    </div>
-                    <!-- <div class="h-[48%] border border-red-600 relative">
-                        <div
-                            class="absolute flex flex-colnp justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-40">
-                        </div>
-                        <div class="absolute">
-                            <h3>Join our Community</h3>
-                            <p>Stay dry and cean your bike rides with the Bicycle Fenders</p>
-                        </div>
-                        <img src="/img/bike.jpg" alt="Carving Longboard" class="w-full h-auto" />
-                    </div> -->
-                </section>
-            </section>
-        </section>
+			<section class="flex flex-col items-center gap-4 py-4">
+				<h2 class="pt-5 text-2xl text-center">
+					<span class="text-red-600">ABOUT</span> US
+				</h2>
+				<section class="flex items-center w-3/5 justify-evenly">
+					<span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
+					<span class="w-[7%] text-2xl text-center">
+						<i class="fa-solid fa-gear"></i>
+					</span>
+					<span class="w-1/4 h-[2px] border bg-slate-900 rounded"></span>
+				</section>
 
-        <section class="Testimonial-Section">
-            <h2 class="font-Phudu">Testimonials</h2>
-            <div class="testimonials-container">
+				<!-- about section -->
+				<section class="flex-row flex-wrap w-full gap-8">
+					<div class="relative border h-fit">
+						<figure class="relative flex flex-col items-center justify-center">
+							<div
+								class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-40"
+							></div>
+							<img
+								src="/img/m-biking.jpg"
+								alt="Cruiser Bike"
+								class="w-full h-auto"
+							/>
+							<div
+								class="absolute flex flex-col items-center justify-center w-2/5 gap-3 text-center text-white h-5/6"
+							>
+								<h2
+									class="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-Roboto"
+								>
+									Our Story
+								</h2>
+								<p class="font-sans">
+									Ajibade Abdulmatin founded his first shop in Nigeria 2022
+								</p>
+								<button
+									class="w-full h-10 text-black bg-white hover:bg-slate-100 hover:ring-2 ring-sky-200"
+								>
+									<a href="">LEARN MORE</a>
+								</button>
+							</div>
+						</figure>
+					</div>
 
-            </div>
-        </section>
-    </main>
+					<section class="flex flex-col w-full md:flex-row">
+						<div class="h-[48% relative">
+							<div
+								class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-40"
+							></div>
+							<img
+								src="/img/bike.jpg"
+								alt="Carving Longboard"
+								class="w-full h-full"
+							/>
+							<div
+								class="absolute top-0 flex items-center justify-center w-full h-full text-white font-Roboto"
+							>
+								<div
+									class="flex flex-col items-center justify-center w-full h-full gap-2 border"
+								>
+									<h2 class="text-2xl">Recieve our Newsletter</h2>
+									<div
+										class="flex items-center w-4/5 h-12 bg-white border border-white justify-evenly"
+									>
+										<button
+											class="w-2/5 h-full border-none outline-none bg-sky-950"
+										>
+											SIGN UP
+										</button>
+										<input
+											type="text"
+											class="w-3/5 h-full pl-6 font-sans text-xl text-sky-950"
+											placeholder="YOUR EMAIL"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
 
-    <footer class="bg-[#333] text-slate-300">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="https://prycycle.netlify.app/about">About Us</a></li>
-                <li><a href="https://prycycle.netlify.app/contact">Contact Us</a></li>
-            </ul>
-        </nav>
-        <p class="copy">&copy; 2023 Prycycle. All rights reserved.</p>
-    </footer>
-</body>
+						<div class="h-[48% relative">
+							<div
+								class="absolute flex flex-col justify-center w-full h-full gap-1 pl-6 bg-black bg-opacity-40"
+							></div>
+							<img
+								src="/img/bike.jpg"
+								alt="Carving Longboard"
+								class="w-full h-full"
+							/>
+							<div
+								class="absolute top-0 flex items-center justify-center w-full h-full text-white"
+							>
+								<div
+									class="flex flex-col items-center justify-center w-full h-full gap-2 border"
+								>
+									<h2 class="text-2xl font-Roboto">Join our Community</h2>
+									<div class="flex gap-2">
+										<i class="fa-brands fa-facebook"></i>
+										<i class="fa-brands fa-twitter"></i>
+										<i class="fa-brands fa-instagram"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</section>
 
+			<section class="Testimonial-Section">
+				<h2 class="font-Phudu">Testimonials</h2>
+				<div class="testimonials-container"></div>
+			</section>
+		</main>
+
+		<footer class="bg-[#333] text-slate-300">
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li>
+						<a href="https://prycycle.netlify.app/about">About Us</a>
+					</li>
+					<li>
+						<a href="https://prycycle.netlify.app/contact">Contact Us</a>
+					</li>
+				</ul>
+			</nav>
+			<p class="copy">&copy; 2023 Prycycle. All rights reserved.</p>
+		</footer>
+	</body>
 </html>
