@@ -13,4 +13,6 @@ const initApp = () => {
 
     menuBtn.addEventListener('click', toggleBtn);
     navOpen.addEventListener('click', toggleBtn);
+
+    
 };
