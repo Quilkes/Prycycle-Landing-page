@@ -1274,20 +1274,16 @@ video {
     height: 2px;
   }
 
+  .md\:h-\[35rem\] {
+    height: 35rem;
+  }
+
   .md\:h-\[40rem\] {
     height: 40rem;
   }
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-\[30rem\] {
-    height: 30rem;
-  }
-
-  .md\:h-\[35rem\] {
-    height: 35rem;
   }
 
   .md\:w-1\/6 {
